@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>READ-UP | Labangal National High School</title>
+<meta name="description" content="READ-UP: Reading Enhancement and Development through Understanding and Practice">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <nav class="nav">
+    <div class="brand">
+      <div class="brand-mark">R</div>
+      <div><strong>READ-UP</strong><span>Labangal National High School</span></div>
+    </div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <div id="navLinks" class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#materials">Materials</a>
+      <a href="#activities">Activities</a>
+      <a href="#assessment">Assessment</a>
+      <a href="#progress">Progress</a>
+      <a href="#teachers">Teachers</a>
+    </div>
+  </nav>
+
+  <section id="home" class="hero-content">
+    <div class="hero-copy">
+      <p class="eyebrow">READING INTERVENTION PLATFORM</p>
+      <h1>Read. Understand.<br><span>Practice. Progress.</span></h1>
+      <p class="lead">READ-UP — Reading Enhancement and Development through Understanding and Practice — provides accessible reading materials and activities to help learners strengthen comprehension skills.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#materials">Start Reading</a>
+        <a class="btn light" href="#assessment">Take an Assessment</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="book-icon">📖</div>
+      <h3>Your Reading Journey</h3>
+      <p>Build vocabulary, understand texts, answer questions, and monitor your progress.</p>
+      <div class="mini-stats">
+        <div><b>3</b><small>Reading Levels</small></div>
+        <div><b>4</b><small>Skill Areas</small></div>
+        <div><b>∞</b><small>Practice</small></div>
+      </div>
+    </div>
+  </section>
+</header>
+
+<main>
+<section class="section intro">
+  <div class="section-title">
+    <p class="eyebrow">ABOUT THE PROGRAM</p>
+    <h2>What is READ-UP?</h2>
+  </div>
+  <p>READ-UP is a school-based reading support platform designed to provide structured reading practice. It combines reading passages, vocabulary work, comprehension questions, and assessments in one accessible place.</p>
+  <div class="feature-grid">
+    <article><span>📚</span><h3>Accessible Materials</h3><p>Reading texts and activities organized by level.</p></article>
+    <article><span>🧠</span><h3>Comprehension Skills</h3><p>Practice literal, inferential, and critical understanding.</p></article>
+    <article><span>📈</span><h3>Progress Monitoring</h3><p>Record scores and track improvement over time.</p></article>
+  </div>
+</section>
+
+<section id="materials" class="section alt">
+  <div class="section-title">
+    <p class="eyebrow">LEARNER RESOURCES</p>
+    <h2>Reading Materials</h2>
+    <p>Select a level and open a sample reading passage. Replace the sample texts with your school's READ-UP materials.</p>
+  </div>
+  <div class="level-tabs">
+    <button class="tab active" onclick="showLevel('level1', this)">Level 1</button>
+    <button class="tab" onclick="showLevel('level2', this)">Level 2</button>
+    <button class="tab" onclick="showLevel('level3', this)">Level 3</button>
+  </div>
+
+  <div id="level1" class="level-panel">
+    <div class="material-card">
+      <div><span class="tag">BEGINNING READER</span><h3>The Helpful Garden</h3>
+      <p>A short passage about caring for plants, followed by simple comprehension questions.</p>
+      <button class="btn small primary" onclick="openReading('The Helpful Garden', level1Text)">Open Reading</button></div>
+      <div class="material-icon">🌱</div>
+    </div>
+    <div class="material-card">
+      <div><span class="tag">VOCABULARY</span><h3>Words Around Us</h3><p>Practice identifying familiar words and their meanings from context.</p>
+      <button class="btn small secondary" onclick="startVocabulary()">Practice Words</button></div>
+      <div class="material-icon">🔤</div>
+    </div>
+  </div>
+
+  <div id="level2" class="level-panel hidden">
+    <div class="material-card">
+      <div><span class="tag">DEVELOPING READER</span><h3>The Power of Practice</h3>
+      <p>A passage about how regular practice can help learners improve a skill.</p>
+      <button class="btn small primary" onclick="openReading('The Power of Practice', level2Text)">Open Reading</button></div>
+      <div class="material-icon">💡</div>
+    </div>
+    <div class="material-card">
+      <div><span class="tag">COMPREHENSION</span><h3>Finding the Main Idea</h3><p>Practice identifying the central message of a short text.</p>
+      <button class="btn small secondary" onclick="openActivity('Main Idea Practice')">Practice</button></div>
+      <div class="material-icon">🎯</div>
+    </div>
+  </div>
+
+  <div id="level3" class="level-panel hidden">
+    <div class="material-card">
+      <div><span class="tag">APPROACHING GRADE LEVEL</span><h3>Reading in the Digital Age</h3>
+      <p>An informational text about responsible and effective reading in digital environments.</p>
+      <button class="btn small primary" onclick="openReading('Reading in the Digital Age', level3Text)">Open Reading</button></div>
+      <div class="material-icon">💻</div>
+    </div>
+    <div class="material-card">
+      <div><span class="tag">CRITICAL READING</span><h3>Think Beyond the Text</h3><p>Practice making conclusions and supporting answers with evidence.</p>
+      <button class="btn small secondary" onclick="openActivity('Critical Reading Practice')">Practice</button></div>
+      <div class="material-icon">🔎</div>
+    </div>
+  </div>
+</section>
+
+<section id="activities" class="section">
+  <div class="section-title">
+    <p class="eyebrow">PRACTICE</p>
+    <h2>Interactive Activities</h2>
+  </div>
+  <div class="activity-grid">
+    <button class="activity-card" onclick="openActivity('Vocabulary Builder')"><span>🔤</span><h3>Vocabulary Builder</h3><p>Build word knowledge using context clues.</p></button>
+    <button class="activity-card" onclick="openActivity('Literal Comprehension')"><span>📌</span><h3>Literal Comprehension</h3><p>Find information stated directly in the text.</p></button>
+    <button class="activity-card" onclick="openActivity('Inferential Comprehension')"><span>🧩</span><h3>Inferential Comprehension</h3><p>Use clues from the text to make conclusions.</p></button>
+    <button class="activity-card" onclick="openActivity('Critical Reading')"><span>💭</span><h3>Critical Reading</h3><p>Evaluate ideas and support your thinking.</p></button>
+  </div>
+</section>
+
+<section id="assessment" class="section alt">
+  <div class="section-title">
+    <p class="eyebrow">CHECK YOUR LEARNING</p>
+    <h2>Online Assessment</h2>
+    <p>Use the sample assessment below or replace it with your Google Forms assessment.</p>
+  </div>
+  <div class="assessment-box">
+    <div class="assessment-info"><span class="big-icon">📝</span><div><h3>READ-UP Practice Assessment</h3><p>5-item sample assessment covering basic comprehension skills.</p></div></div>
+    <button class="btn primary" onclick="startAssessment()">Start Assessment</button>
+  </div>
+  <div class="embed-note">
+    <strong>For your actual school assessment:</strong> create a Google Form, then replace the assessment button with your Google Forms link. This lets you collect responses and scores without building a database.
+  </div>
+</section>
+
+<section id="progress" class="section">
+  <div class="section-title">
+    <p class="eyebrow">MONITORING</p>
+    <h2>My Reading Progress</h2>
+    <p>This demo stores progress only in the learner's browser. For actual learner records, use a school-approved system such as Google Sheets/Forms with appropriate privacy safeguards.</p>
+  </div>
+  <div class="progress-card">
+    <div class="progress-number" id="scoreDisplay">0%</div>
+    <div><h3>Practice Completion</h3><p id="progressText">Complete activities to update your local progress.</p></div>
+  </div>
+  <div class="progress-bar"><div id="progressBar"></div></div>
+  <button class="btn small secondary" onclick="resetProgress()">Reset Local Progress</button>
+</section>
+
+<section id="teachers" class="section alt">
+  <div class="section-title">
+    <p class="eyebrow">TEACHER RESOURCES</p>
+    <h2>For Teachers</h2>
+  </div>
+  <div class="teacher-grid">
+    <div class="resource"><span>📄</span><h3>Teacher's Guide</h3><p>Add your intervention guide, lesson plans, and implementation procedures here.</p><a href="#" onclick="placeholder(event)">Add file/link</a></div>
+    <div class="resource"><span>📊</span><h3>Monitoring Tools</h3><p>Add reading profiles, assessment records, and progress-monitoring templates.</p><a href="#" onclick="placeholder(event)">Add file/link</a></div>
+    <div class="resource"><span>📥</span><h3>Download Center</h3><p>Upload printable reading passages, worksheets, and activity sheets.</p><a href="#" onclick="placeholder(event)">Add file/link</a></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div><strong>READ-UP</strong><p>Reading Enhancement and Development through Understanding and Practice</p></div>
+  <div><p>Labangal National High School</p><p>School Reading Intervention Program</p></div>
+</footer>
+
+<div id="modal" class="modal hidden" onclick="closeModal(event)">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="close" onclick="closeModal()">×</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+const level1Text = `Plants need care to grow well. They need water, sunlight, air, and healthy soil. In a school garden, learners can help by watering the plants and removing weeds. Caring for plants teaches us to be patient and responsible. When we take care of living things, we also learn to value our environment.`;
+const level2Text = `Practice is an important part of learning. When learners practice a skill regularly, they have more opportunities to notice mistakes and improve. Reading every day, even for a short time, can help build vocabulary and comprehension. Progress may not happen immediately, but consistent effort can make learning easier over time.`;
+const level3Text = `Digital technology has changed the way people read. Learners can now access articles, electronic books, and educational materials using different devices. However, effective digital reading requires focus and careful judgment. Readers should identify reliable sources, understand the purpose of a text, and avoid distractions. Responsible digital readers use technology as a tool for learning rather than simply consuming information.`;
+
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('show')}
+function showLevel(id, btn){
+ document.querySelectorAll('.level-panel').forEach(x=>x.classList.add('hidden'));
+ document.getElementById(id).classList.remove('hidden');
+ document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+ btn.classList.add('active');
+}
+function openReading(title,text){
+ openModal(`<span class="tag">READING MATERIAL</span><h2>${title}</h2><div class="reading-text"><p>${text}</p></div><h3>Think About It</h3><ol><li>What is the main idea of the passage?</li><li>What detail supports the main idea?</li><li>What lesson can you apply to your own learning?</li></ol><button class="btn primary" onclick="markComplete()">Mark as Completed</button>`);
+}
+function openActivity(title){
+ openModal(`<span class="tag">ACTIVITY</span><h2>${title}</h2><p>Answer the questions below. This sample activity can be replaced with your actual READ-UP worksheet or interactive exercise.</p><div class="question"><b>1.</b> Which statement best describes the purpose of reading practice?</div><label><input type="radio" name="q1"> To improve understanding and build skills</label><label><input type="radio" name="q1"> To avoid learning new words</label><label><input type="radio" name="q1"> To finish a task without thinking</label><button class="btn primary" onclick="markComplete(); alert('Activity completed!')">Submit Activity</button>`);
+}
+function startVocabulary(){openActivity('Vocabulary Builder')}
+function startAssessment(){
+ openModal(`<span class="tag">ASSESSMENT</span><h2>READ-UP Practice Assessment</h2><p>Read the passage: <i>Regular reading gives learners opportunities to discover new words, understand ideas, and develop better comprehension.</i></p>
+ <div class="question"><b>1.</b> What is the main idea?<br><label><input type="radio" name="a1" value="1"> Reading can help develop comprehension.</label><label><input type="radio" name="a1" value="0"> Reading is only useful for discovering words.</label></div>
+ <div class="question"><b>2.</b> What can learners discover through reading?<br><label><input type="radio" name="a2" value="1"> New words and ideas.</label><label><input type="radio" name="a2" value="0"> Only pictures.</label></div>
+ <div class="question"><b>3.</b> Which skill is mentioned?<br><label><input type="radio" name="a3" value="1"> Comprehension.</label><label><input type="radio" name="a3" value="0"> Running.</label></div>
+ <button class="btn primary" onclick="gradeAssessment()">Submit Assessment</button><div id="result"></div>`);
+}
+function gradeAssessment(){
+ let score=0; for(let i=1;i<=3;i++){let x=document.querySelector(`input[name=a${i}]:checked`); if(x) score+=Number(x.value)}
+ document.getElementById('result').innerHTML=`<div class="result"><h3>Your Score: ${score}/3</h3><p>${score===3?'Excellent work!':score===2?'Good job! Review the passage once more.':'Keep practicing. Read the passage again and try once more.'}</p></div>`;
+ markComplete();
+}
+function markComplete(){
+ let p=Math.min(100,(Number(localStorage.getItem('readupProgress')||0)+10));
+ localStorage.setItem('readupProgress',p); updateProgress(); closeModal();
+}
+function updateProgress(){
+ let p=Number(localStorage.getItem('readupProgress')||0);
+ document.getElementById('scoreDisplay').textContent=p+'%';
+ document.getElementById('progressBar').style.width=p+'%';
+ document.getElementById('progressText').textContent=p?`You have completed approximately ${p}% of the sample activities.`:'Complete activities to update your local progress.';
+}
+function resetProgress(){localStorage.removeItem('readupProgress');updateProgress()}
+function openModal(body){document.getElementById('modalBody').innerHTML=body;document.getElementById('modal').classList.remove('hidden')}
+function closeModal(){document.getElementById('modal').classList.add('hidden')}
+function placeholder(e){e.preventDefault();alert('Replace this placeholder with your Google Drive, PDF, or school resource link.')}
+updateProgress();
+</script>
+</body>
+</html>
